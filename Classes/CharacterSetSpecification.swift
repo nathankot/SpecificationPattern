@@ -1,6 +1,6 @@
 import Foundation
 
-class CharacterSetSpecification: CompositeSpecification {
+public class CharacterSetSpecification: CompositeSpecification {
 	let characterSet: NSCharacterSet
 	
 	init(characterSet: NSCharacterSet) {
@@ -84,7 +84,7 @@ class CharacterSetSpecification: CompositeSpecification {
 	}
 
 	
-	override func isSatisfiedBy(candidate: Any?) -> Bool {
+	override public func isSatisfiedBy(candidate: Any?) -> Bool {
 		if let fullString = candidate as? String {
 			for character: Character in fullString {
 				let range: Range<String.Index>? =

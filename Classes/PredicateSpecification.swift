@@ -1,6 +1,6 @@
 import Foundation
 
-class PredicateSpecification<T>: CompositeSpecification {
+public class PredicateSpecification<T>: CompositeSpecification {
 	let predicate: T -> Bool
 	
 	init(predicate: T -> Bool) {
@@ -8,7 +8,7 @@ class PredicateSpecification<T>: CompositeSpecification {
 		super.init()
 	}
 	
-	override func isSatisfiedBy(candidate: Any?) -> Bool {
+	override public func isSatisfiedBy(candidate: Any?) -> Bool {
 		if let obj = candidate as? T {
 			return predicate(obj)
 		}

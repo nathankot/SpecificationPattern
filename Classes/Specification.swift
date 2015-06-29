@@ -6,6 +6,8 @@ public protocol Specification {
 }
 
 public class CompositeSpecification: Specification {
+  public init() { }
+
 	public func isSatisfiedBy(candidate: Any?) -> Bool {
 		// subclass must implement this method
 		return false

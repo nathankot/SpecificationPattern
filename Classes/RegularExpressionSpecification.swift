@@ -1,14 +1,14 @@
 import Foundation
 
-class RegularExpressionSpecification: CompositeSpecification {
+public class RegularExpressionSpecification: CompositeSpecification {
 	let regularExpression: NSRegularExpression
 	
-	init(regularExpression: NSRegularExpression) {
+	public init(regularExpression: NSRegularExpression) {
 		self.regularExpression = regularExpression
 		super.init()
 	}
 	
-	convenience init(pattern: String) {
+	public convenience init(pattern: String) {
 		var error: NSError?
 		var regularExpression = NSRegularExpression(pattern: pattern, options: nil, error: &error)
 		assert(error == nil, "the regular expression pattern must always compile")
@@ -16,7 +16,7 @@ class RegularExpressionSpecification: CompositeSpecification {
 		self.init(regularExpression: regularExpression!)
 	}
 	
-	override func isSatisfiedBy(candidate: Any?) -> Bool {
+	override public func isSatisfiedBy(candidate: Any?) -> Bool {
 		if let s = candidate as? String {
 			return regularExpression.numberOfMatchesInString(s, options: nil, range: NSMakeRange(0, count(s))) > 0
 		}
