@@ -9,16 +9,17 @@ public class RegularExpressionSpecification: CompositeSpecification {
 	}
 	
 	public convenience init(pattern: String) {
-		var error: NSError?
-		var regularExpression = NSRegularExpression(pattern: pattern, options: nil, error: &error)
-		assert(error == nil, "the regular expression pattern must always compile")
+    let regularExpression = try? NSRegularExpression(pattern: pattern, options: NSRegularExpressionOptions(rawValue: 0))
 		assert(regularExpression != nil, "the regular expression pattern must always compile")
 		self.init(regularExpression: regularExpression!)
 	}
 	
 	override public func isSatisfiedBy(candidate: Any?) -> Bool {
 		if let s = candidate as? String {
-			return regularExpression.numberOfMatchesInString(s, options: nil, range: NSMakeRange(0, count(s))) > 0
+			return regularExpression.numberOfMatchesInString(
+        s,
+        options: NSMatchingOptions(rawValue: 0),
+        range: NSMakeRange(0, s.characters.count)) > 0
 		}
 		return false
 	}
