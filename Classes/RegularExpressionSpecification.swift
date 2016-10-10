@@ -1,6 +1,6 @@
 import Foundation
 
-public class RegularExpressionSpecification: CompositeSpecification {
+open class RegularExpressionSpecification: CompositeSpecification {
 	let regularExpression: NSRegularExpression
 	
 	public init(regularExpression: NSRegularExpression) {
@@ -9,16 +9,16 @@ public class RegularExpressionSpecification: CompositeSpecification {
 	}
 	
 	public convenience init(pattern: String) {
-    let regularExpression = try? NSRegularExpression(pattern: pattern, options: NSRegularExpressionOptions(rawValue: 0))
+    let regularExpression = try? NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options(rawValue: 0))
 		assert(regularExpression != nil, "the regular expression pattern must always compile")
 		self.init(regularExpression: regularExpression!)
 	}
 	
-	override public func isSatisfiedBy(candidate: Any?) -> Bool {
+	override open func isSatisfiedBy(_ candidate: Any?) -> Bool {
 		if let s = candidate as? String {
-			return regularExpression.numberOfMatchesInString(
-        s,
-        options: NSMatchingOptions(rawValue: 0),
+			return regularExpression.numberOfMatches(
+        in: s,
+        options: NSRegularExpression.MatchingOptions(rawValue: 0),
         range: NSMakeRange(0, s.characters.count)) > 0
 		}
 		return false

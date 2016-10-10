@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D8DD19291BB1D6C100B9D9EE /* SpecificationPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = D8DD19281BB1D6C100B9D9EE /* SpecificationPattern.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D8DD19371BB1D6FC00B9D9EE /* CharacterSetSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19301BB1D6FC00B9D9EE /* CharacterSetSpecification.swift */; settings = {ASSET_TAGS = (); }; };
-		D8DD19381BB1D6FC00B9D9EE /* CountSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19311BB1D6FC00B9D9EE /* CountSpecification.swift */; settings = {ASSET_TAGS = (); }; };
-		D8DD19391BB1D6FC00B9D9EE /* EmailSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19321BB1D6FC00B9D9EE /* EmailSpecification.swift */; settings = {ASSET_TAGS = (); }; };
-		D8DD193A1BB1D6FC00B9D9EE /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19331BB1D6FC00B9D9EE /* Operator.swift */; settings = {ASSET_TAGS = (); }; };
-		D8DD193B1BB1D6FC00B9D9EE /* PredicateSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19341BB1D6FC00B9D9EE /* PredicateSpecification.swift */; settings = {ASSET_TAGS = (); }; };
-		D8DD193C1BB1D6FC00B9D9EE /* RegularExpressionSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19351BB1D6FC00B9D9EE /* RegularExpressionSpecification.swift */; settings = {ASSET_TAGS = (); }; };
-		D8DD193D1BB1D6FC00B9D9EE /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19361BB1D6FC00B9D9EE /* Specification.swift */; settings = {ASSET_TAGS = (); }; };
+		D8DD19371BB1D6FC00B9D9EE /* CharacterSetSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19301BB1D6FC00B9D9EE /* CharacterSetSpecification.swift */; };
+		D8DD19381BB1D6FC00B9D9EE /* CountSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19311BB1D6FC00B9D9EE /* CountSpecification.swift */; };
+		D8DD19391BB1D6FC00B9D9EE /* EmailSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19321BB1D6FC00B9D9EE /* EmailSpecification.swift */; };
+		D8DD193A1BB1D6FC00B9D9EE /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19331BB1D6FC00B9D9EE /* Operator.swift */; };
+		D8DD193B1BB1D6FC00B9D9EE /* PredicateSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19341BB1D6FC00B9D9EE /* PredicateSpecification.swift */; };
+		D8DD193C1BB1D6FC00B9D9EE /* RegularExpressionSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19351BB1D6FC00B9D9EE /* RegularExpressionSpecification.swift */; };
+		D8DD193D1BB1D6FC00B9D9EE /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD19361BB1D6FC00B9D9EE /* Specification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +117,7 @@
 				TargetAttributes = {
 					D8DD19241BB1D6C100B9D9EE = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -269,6 +270,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -286,6 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathankot.SpecificationPattern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
