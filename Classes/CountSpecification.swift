@@ -39,7 +39,7 @@ open class CountSpecification: CompositeSpecification {
 		var n: Int = 0
 		repeat {
 			if let x = candidate as? String {
-				n = x.characters.count
+				n = x.count
 				break
 			}
 

@@ -19,7 +19,7 @@ open class RegularExpressionSpecification: CompositeSpecification {
 			return regularExpression.numberOfMatches(
         in: s,
         options: NSRegularExpression.MatchingOptions(rawValue: 0),
-        range: NSMakeRange(0, s.characters.count)) > 0
+        range: NSMakeRange(0, s.count)) > 0
 		}
 		return false
 	}

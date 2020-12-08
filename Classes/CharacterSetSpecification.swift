@@ -85,7 +85,7 @@ open class CharacterSetSpecification: CompositeSpecification {
 
 	override open func isSatisfiedBy(_ candidate: Any?) -> Bool {
 		if let fullString = candidate as? String {
-			for character: Character in fullString.characters {
+			for character in fullString {
 				let range: Range<String.Index>? =
 				String(character).rangeOfCharacter(from: characterSet)
 				if range == nil {
